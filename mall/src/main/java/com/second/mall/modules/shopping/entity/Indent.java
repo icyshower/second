@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 /**
- * @ClassName Indent
+ * @ClassName Indent：订单
  * @Author icy
  * @Data 2020/12/31 14:42
  * @Version v1.0
@@ -17,13 +17,12 @@ import java.time.LocalDateTime;
 public class Indent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int indentId;
-    private String productName;
-    private int productNumber;
-    private int userId;
-    private int addressId;
-    private double indentPrice;
-    private LocalDateTime createTime;
-    private int state;
+    private int indentId;   //订单id
+    private String indentCode;  //订单编号
+    private int userId; //订单用户id
+    private int addressId;  //收货地址id
+    private double indentPrice; //订单总价格
+    private LocalDateTime createTime;   //订单创建时间
+    private int state;  //订单状态，0:未付款;1:未收货;2:已收货未评价;3:已评价;4:退货中;5:已退货
 
 }
