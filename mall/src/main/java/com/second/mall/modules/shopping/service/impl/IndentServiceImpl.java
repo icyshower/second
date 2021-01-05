@@ -88,5 +88,6 @@ public class IndentServiceImpl implements IndentService {
         return new PageInfo<Indent>(Optional
                 .ofNullable(indentDao.getIndentBySearchBean(searchBean))
                 .orElse(Collections.emptyList()));
+
     }
 }
